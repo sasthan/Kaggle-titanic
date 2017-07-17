@@ -2,7 +2,7 @@
 
 Source for competition - https://www.kaggle.com/c/titanic
 
-Competition Description
+# Competition Description
 
 The sinking of the RMS Titanic is one of the most infamous shipwrecks in history.  On April 15, 1912, during her maiden voyage, the Titanic sank after colliding with an iceberg, killing 1502 out of 2224 passengers and crew. This sensational tragedy shocked the international community and led to better safety regulations for ships.
 
@@ -10,23 +10,25 @@ One of the reasons that the shipwreck led to such loss of life was that there we
 
 In this challenge, we ask you to complete the analysis of what sorts of people were likely to survive. In particular, we ask you to apply the tools of machine learning to predict which passengers survived the tragedy.
 
-Practice Skills
+# Practice Skills
 
 Binary classification
 Python and R basics
 
-Aim: To predict what kind of people were likely to have survived the Titanic disaster based on attributes like gender, class, age, ticket fares, etc. 
+# Aim
 
-Goal
+To predict what kind of people were likely to have survived the Titanic disaster based on attributes like gender, class, age, ticket fares, etc. 
+
+# Goal
 
 It is your job to predict if a passenger survived the sinking of the Titanic or not. 
 For each PassengerId in the test set, you must predict a 0 or 1 value for the Survived variable.
 
-Metric
+# Metric
 
 Your score is the percentage of passengers you correctly predict. This is known simply as "accuracy”.
 
-Overview
+# Overview
 
 The data has been split into two groups:
 
@@ -36,7 +38,7 @@ The training set should be used to build your machine learning models. For the t
 
 The test set should be used to see how well your model performs on unseen data. For the test set, we do not provide the ground truth for each passenger. It is your job to predict these outcomes. For each passenger in the test set, use the model you trained to predict whether or not they survived the sinking of the Titanic.
 
-Data Dictionary
+# Data Dictionary
 
 Variable	Definition	Key
 survival	Survival	0 = No, 1 = Yes
