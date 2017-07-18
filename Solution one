@@ -1,0 +1,68 @@
+# Import the Pandas library
+import pandas as pd 
+
+# Load the train and test datasets to create two DataFrames
+train_url = "http://s3.amazonaws.com/assets.datacamp.com/course/Kaggle/train.csv"
+train = pd.read_csv(train_url)
+
+test_url = "http://s3.amazonaws.com/assets.datacamp.com/course/Kaggle/test.csv"
+test = pd.read_csv(test_url)
+
+#Print the `head` of the train and test dataframes
+print(train.head())
+print(test.head())
+
+ PassengerId  Survived  Pclass  \
+0            1         0       3   
+1            2         1       1   
+2            3         1       3   
+3            4         1       1   
+4            5         0       3   
+
+                                                Name     Sex   Age  SibSp  \
+0                            Braund, Mr. Owen Harris    male  22.0      1   
+1  Cumings, Mrs. John Bradley (Florence Briggs Th...  female  38.0      1   
+2                             Heikkinen, Miss. Laina  female  26.0      0   
+3       Futrelle, Mrs. Jacques Heath (Lily May Peel)  female  35.0      1   
+4                           Allen, Mr. William Henry    male  35.0      0   
+
+   Parch            Ticket     Fare Cabin Embarked  
+0      0         A/5 21171   7.2500   NaN        S  
+1      0          PC 17599  71.2833   C85        C  
+2      0  STON/O2. 3101282   7.9250   NaN        S  
+3      0            113803  53.1000  C123        S  
+4      0            373450   8.0500   NaN        S  
+   PassengerId  Pclass                                          Name     Sex  \
+0          892       3                              Kelly, Mr. James    male   
+1          893       3              Wilkes, Mrs. James (Ellen Needs)  female   
+2          894       2                     Myles, Mr. Thomas Francis    male   
+3          895       3                              Wirz, Mr. Albert    male   
+4          896       3  Hirvonen, Mrs. Alexander (Helga E Lindqvist)  female   
+
+    Age  SibSp  Parch   Ticket     Fare Cabin Embarked  
+0  34.5      0      0   330911   7.8292   NaN        Q  
+1  47.0      1      0   363272   7.0000   NaN        S  
+2  62.0      0      0   240276   9.6875   NaN        Q  
+3  27.0      0      0   315154   8.6625   NaN        S  
+4  22.0      1      1  3101298  12.2875   NaN        S  
+
+
+# Passengers that survived vs passengers that passed away
+print(train["Survived"].value_counts())
+
+# As proportions
+print(train["Survived"].value_counts(normalize=True))
+
+# Males that survived vs males that passed away
+print(train["Survived"][train["Sex"] == 'male'].value_counts())
+
+# Females that survived vs Females that passed away
+print(train["Survived"][train["Sex"] == 'female'].value_counts())
+
+# Normalized male survival
+print(train["Survived"][train["Sex"] == 'male'].value_counts(normalize=True))
+
+# Normalized female survival
+print(train["Survived"][train["Sex"] == 'female'].value_counts(normalize=True))
+
+
